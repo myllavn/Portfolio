@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: repeating-radial-gradient(purple, black, black);
+  padding: 50px 5%;
+}
+
+/* Efeito transparente */
+.container {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, .1);
+  position: relative;
+  height: 45rem;
+  border: 2px solid rgba(255, 255, 255, .1);
+  backdrop-filter: blur(30px);
+  transform: scale(0);
+  animation: zoom-in 2s ease forwards;
+}
+
+@keyframes zoom-in {
+  100% {
+    transform: scale(1);
+  }
+}
+
+header {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  padding: 25px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.animacao {
+  transform: translateY(30px);
+  opacity: 0;
+  animation: slide-in 0.8s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Efeito do brilho */
+@keyframes brilho {
+  0%, 100% {
+    text-shadow: 0 0 5px #c941e8, 0 0 10px #c881f8, 0 0 20px #481a5a, 0 0 40px #643071;
+  }
+  50% {
+    text-shadow: 0 0 2px #d13ab0, 0 0 5px #64397b, 0 0 10px #7c3f96;
+  }
+}
+
+h1 {
+  color: #ffffffec;
+  animation: brilho 4s infinite alternate-reverse;
+}
+
+.navbar a:hover {
+  color: white;
+  text-shadow: 0 0 80px white;
+}
+
+.navbar a:hover, .navbar a.active {
+  border-color: #fff;
+}
+
+.sobre-mim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 30px;
+  padding: 50px 5% 0;
+  color: #fff;
+  animation-delay: 1.5s;
+  text-align: center;
+}
+
+.resumo h1 {
+  font-size: 3rem;
+  line-height: 1;
+  padding: 10px;
+}
+
+.resumo h2 {
+  font-size: 2rem;
+  padding: 5px;
+  color: #ffffffcb;
+}
+
+.resumo p {
+  margin: 10px 0 20px;
+  font-size: 1.25rem;
+  color: #ffffffdf;
+}
+
+.resumo .download-curriculo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 10px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #fff;
+  color: rgb(69, 42, 94);
+  text-decoration: none;
+  font-weight: 500;
+  transition: .5s;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  color: #fff;
+}
+
+.sobre-mim .icons {
+  padding: 10px;
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.sobre-mim .icons a {
+  display: inline-flex;
+  padding: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.sobre-mim .icons a:hover {
+  background: #fff;
+  box-shadow: 0 0 10px #fff;
+  color: rgb(69, 42, 94);
+}
+
+.img-port .img-circulo {
+  position: relative;
+  width: 20vw;
+  height: 20vw;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #fff;
+  overflow: hidden;
+}
+
+.img-port .img-circulo img {
+  position: absolute;
+  top: 0px;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Menu */
+.navbar a {
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  border-bottom: 2px solid transparent;
+  transition: .7s;
+  
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 800;
+  color: rgba(255, 255, 255, .1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+/* Oculta o menu mobile e a lista no desktop */
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+
+.mobile-menu div {
+  width: 30px;
+  height: 3px;
+  background: #000;
+  margin: 6px;
+  border-radius: 2px;
+}
+
+.nav-list.active {
+  display: flex;
+  list-style: none;
+}
+
+.skill-card {
+    margin: 1rem;
+    padding: 1rem;
+    height: 8rem;
+    flex: 1 1 9rem; 
+    max-width: 9rem; 
+    font-size: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgb(201, 150, 250);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    animation: zoom-in 2s ease forwards;
+    transition: transform 0.3s ease; 
+}
+
+.skill-card p {
+  color: rgba(255, 255, 255, 0.552);
+}
+.skill-card:hover {
+  transform: scale(1.05);
+}
+.skill-card .icons-habilidades {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.habilidades {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 50px 5%;
+  min-height: 80vh; 
+}
+
+/* Mostra o menu hamburguer e esconde os botões quando a tela for pequena */
+@media (max-width: 768px) {
+  button[data-section] {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .icons-habilidades{
+    font-size: 1rem;
+  }
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+/* Esconde os botões quando a tela for menor que 999px */
+@media (max-width: 999px) {
+  button[data-section] {
+    display: none;
+  }
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Background do menu quando está aberto */
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 8vh;
+    right: 0vh;
+    width: 40vw;
+    height: 30vh;
+    background: rgb(31, 2, 24);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    border-radius: 20px;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  /* Mostra os botões dentro do menu hambúrguer no mobile */
+  .nav-list button[data-section] {
+    display: block !important;
+    margin-left: 0;
+    font-size: 1.125rem;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .nav-list button[data-section]:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+  }
+
+  /* Estilo para o botão Fechar */
+  #close-menu {
+    display: block !important;
+    margin-left: 0;
+    font-size: 1.125rem;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+  }
+
+  #close-menu:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #c881f8;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+/* Efeitos menu hambúrguer */
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.page {
+  display: none;
+}
+
+.page.is-visible {
+  display: flex;
+}
+
+.navbar button {
+  font-size: 1.25rem;
+  color: #ffff;
+  background: transparent;
+  border: none;
+  font-weight: 500;
+  margin-left: 35px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: .7s;
+}
+
+.navbar button:hover, .navbar button.active {
+  border-color: #fff;
+  text-shadow: 0 0 80px white;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+
+.page:not(.is-visible) {
+  display: none !important;
+}
+
+.page {
+  display: none;
+}
+
+.page.is-visible {
+  display: flex;
+}
+
+.page:not(.is-visible) {
+  display: none !important;
+}
+
+
+@media (min-width: 1000px) {
+  .nav-list {
+    display: none !important;
+  }
+  .mobile-menu {
+    display: none !important;
+  }
+  button[data-section] {
+    display: inline-block !important;
+  }
+}
+
+
+
+/* Tablets e mobiles médios (até 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 30px 3%;
+  }
+
+  .sobre-mim {
+    gap: 25px;
+    padding: 80px 3% 0;
+  }
+
+  .resumo h1 {
+    font-size: 2.5rem;
+  }
+
+  .resumo h2 {
+    font-size: 1.5rem;
+  }
+
+  .resumo p {
+    font-size: 1rem;
+  }
+
+  .img-port .img-circulo {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .sobre-mim .icons a {
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 8px 20px;
+  }
+
+  .skill-card {
+    margin: 1rem;
+    padding: 1rem;
+    height: 8rem;
+    flex: 1 1 9rem; 
+    max-width: 7rem; 
+    font-size: 11px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgb(201, 150, 250);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    animation: zoom-in 2s ease forwards;
+    transition: transform 0.3s ease; 
+  }
+
+  .skill-card p {
+    color: rgba(255, 255, 255, 0.552);
+  }
+  .skill-card:hover {
+    transform: scale(1.05);
+  }
+  .skill-card .icons-habilidades {
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .habilidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 40px 5%;
+    min-height: 100vh;
+  }
+
+  .container {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .1);
+    position: relative;
+    height: 50rem;
+    border: 2px solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(30px);
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+  }
+}
+
+
+/* Mobiles pequenos (até 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 2%;
+  }
+
+  header {
+    padding: 15px 2%;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .sobre-mim {
+    padding: 60px 2% 0;
+    gap: 20px;
+  }
+
+  .resumo h1 {
+    font-size: 2rem;
+  }
+
+  .resumo h2 {
+    font-size: 1.2rem;
+  }
+
+  .resumo p {
+    font-size: 0.9rem;
+  }
+
+  .img-port .img-circulo {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .sobre-mim .icons a {
+    font-size: 2rem;
+    padding: 5px;
+  }
+
+  .btn {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+  }
+
+  .navbar button {
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+
+  .habilidades {
+    padding: 30px 2% 0;
+  }
+
+  
+  .nav-list {
+    width: 40vw;
+    height: 40vh;
+  }
+
+  .nav-list button[data-section] {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  #close-menu {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  
+}
+
+
+@media (min-width: 1000px) {
+  .sobre-mim {
+    gap: 10px;
+    padding: 50px 3% 0; 
+  }
+
+  .img-port .img-circulo {
+    width: 10vw; 
+    height: 10vw;
+  }
+}
+
+.habilidades{
+  display: flex;
+}
+
+
+.projetos {
+  display: flex;
+  justify-content: center;  
+  margin-top: 1rem;   
+  flex-wrap: wrap;        
+  gap: 1rem;              
+  padding: 30px 2%;       
+  min-height: 100vh;
+}
+
+.skill-card.quiz {
+  width: 40rem;           /* Mantém grande no desktop */
+  height: 30rem;          /* Mantém grande no desktop */
+  max-width: 50vw;        /* Limita a 50% da largura da tela para evitar overflow */
+  max-height: 70vh;       /* Limita a 60% da altura da tela */
+  /* Herda borda, sombra, etc., de .skill-card */
+}
+
+.skill-card.quiz h2 {
+  font-size: 20px;
+  padding: 1rem;
+}
+
+.skill-card.quiz p {
+  font-size: 15px;
+  padding: 1rem;
+}
+
+.quiz-imagem img {
+  width: 100%;            /* Ocupa toda a largura do card */
+  height: auto;           /* Mantém proporção */
+  max-width: 100%;        /* Não ultrapassa o card */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  margin-bottom: 0.5rem;
+}

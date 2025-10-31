@@ -1,0 +1,132 @@
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio</title>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="animacao"> <a href="index.html" class="logo">Portfólio</a>
+                <nav class="navbar">
+
+                    <!-- Botões para versão desktop -->
+                    <button data-section="sobre-mim" class="active">Início</button>
+                    <button data-section="habilidades">Habilidades</button>
+                    <button data-section="projetos">Projetos</button>
+
+                    <!-- Ícone do menu (hambúrguer) -->
+                    <div class="mobile-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+
+                    <!-- Menu de navegação (para celular) -->
+                    <ul class="nav-list">
+                        <li><button data-section="sobre-mim">Início</button></li>
+                        <li><button data-section="habilidades">Habilidades</button></li>
+                        <li><button data-section="projetos">Projetos</button></li>
+                    </ul>
+                </nav>
+            </header> 
+
+            <!-- Página principal -->
+            <section class="page sobre-mim animacao">
+                <div class="resumo">
+                    <h1>Mylla Viana</h1>
+                    <h2>Dev Iniciante</h2>
+                    </div>
+                    <!--Foto-->
+                <div class="img-port">
+                    <div class="img-circulo"> 
+                        <img src="arquivos/mylla-vermelho3.jpg" alt="mylla">
+                    </div>
+                </div> 
+                <p>Cursando 4º Semestre de Sistemas de Informação no Centro Universitário do Centro - Oeste (Unidesc), com foco em desenvolvimento de software.</p>
+                <div class="download-curriculo">
+                    <a href="arquivos/Currículo Mylla.pdf" download="Currículo Mylla" type="application/pdf" class="btn">Baixar Currículo</a>
+                </div>
+                <!--Ícones-->
+                <div class="icons">
+                    <a href="https://github.com/myllavn" target="_blank"><i class="ri-github-line"></i></a>
+                    <a href="https://www.linkedin.com/in/myllavn/" target="_blank"><i class="ri-linkedin-box-line"></i></a> 
+                    <a href="https://www.instagram.com/myllavn?igsh=YzM1cHl0enp3c3kx&utm_source=qr" target="_blank"><i class="ri-instagram-line"></i></a>
+                    <a href="https://wa.me/5561981676614" target="_blank"><i class="ri-phone-line"></i></a> 
+                </div>
+            </section>
+
+            <!--Pages-->
+            <section class="page habilidades">
+                <div class="habilidades">
+                    <div class="skill-card html">
+                        <h2>HTML</h2> 
+                            <p>Básico</p>
+                                <div class="icons-habilidades">
+                                    <i class="ri-html5-line"></i>
+                                </div>
+                    </div>    
+                    <div class="skill-card css">
+                        <h2>CSS</h2>
+                            <p>Básico</p>
+                                <div class="icons-habilidades">
+                                    <i class="ri-css3-line"></i>
+                                </div>
+                    </div>   
+                    <div class="skill-card javascript">
+                        <h2>JavaScript</h2> 
+                            <p>Básico</p>
+                                <div class="icons-habilidades">
+                                    <i class="ri-javascript-line"></i>
+                                </div>
+                    </div>
+                    <div class="skill-card banco-de-dados">
+                        <h2>Banco de Dados</h2> 
+                            <p>Básico</p>
+                                <div class="icons-habilidades">
+                                    <i class="ri-database-2-line"></i>
+                                </div>
+                    </div>
+                    <div class="skill-card ingles">
+                        <h2>Inglês</h2> 
+                            <p>Intermediário</p>
+                                <div class="icons-habilidades">
+                                    <i class="ri-english-input"></i>
+                                </div>
+                    </div>        
+                    <div class="skill-card java">
+                        <h2>Java</h2> 
+                            <p>Básico</p>
+                                <div class="icons-habilidades">
+                                    <i class="ri-java-line"></i>
+                                </div>
+                    </div>
+                    <div class="skill-card python">
+                        <h2>Python</h2> 
+                            <p>Básico</p>
+                                <div class="icons-habilidades">
+                                    <i class="ri-code-box-line"></i>
+                                </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page projetos">
+                <div class ="projetos">
+                    <div class="skill-card quiz">
+                        <h2>Quiz Para Programadores</h2>
+                            <div class="quiz-imagem">
+                                <img src="arquivos/quiz.png" alt="quiz para programadores">
+                            </div>
+                        <p>Quiz fácil para programadores, feito com HTML e CSS. Para conhecer, <a href="https://myllavn.github.io/Quiz-Interativo/" target="_blank">clique aqui</a></p>
+                    </div>
+                </div>
+            </section>
+        <script src="script.js" defer></script>
+
+    </body>
+
+</html>
